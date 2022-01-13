@@ -1,0 +1,54 @@
+<%= form_with(model: location) do |form| %>
+<p>
+  </p>
+
+  <% if location.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+        <% location.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col">
+    <%= form.label :directorate, style: "display: block" %>
+    <%= form.text_field :directorate, class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <%= form.label :street, style: "display: block" %>
+    <%= form.text_field :street, class: "form-control" %>
+  </div>
+  <p>
+    </p>
+  <div class="col">
+    <%= form.label :postcode, style: "display: block" %>
+    <%= form.number_field :postcode, class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control"%>
+  </div>
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id, class: "form-control"%>
+  </div>
+
+
+
+</div>
+<p>
+  </p>
+  <div class="locations-new-button">
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <%= form.submit class: 'btn btn-danger' %>
+  </div>
+  </div>
+
+<% end %>

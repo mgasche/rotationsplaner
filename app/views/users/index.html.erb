@@ -1,0 +1,29 @@
+<head>
+  <title>Users - Rotationsplaner</title>
+</head>
+<h1 class="locations-title">Users</h1>
+<p><%= notice %></p>
+<div class="users-table">
+  <table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+          <th scope="col">Firstname</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Age</th>
+          <th scope="col">About Me</th>
+          <th scope="col">Show</th>
+        </tr>
+      </thead>
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+  </table>
+</div>
+
+
+<div class="users-new-button">
+  <div class="d-grid gap-2">
+<%= link_to "New user", new_user_path, class: 'btn btn-lg btn-danger' %>
+</div>
+</div>

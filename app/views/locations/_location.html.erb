@@ -1,0 +1,37 @@
+
+<div id="<%= dom_id location %>">
+
+
+<tr>
+<td>
+  <p>
+    <%= location.directorate %>
+  </p>
+  </td>
+<td>
+  <p>
+    <%= location.street %>
+  </p>
+  </td>
+<td>
+  <p>
+    <%= location.postcode %>
+  </p>
+  </td>
+<td>
+  <p>
+    <%= location.location %>
+  </p>
+  </td>
+  <td>
+  <p>
+  <%= link_to "Show", location, class: 'btn btn-secondary' %>
+  </p>
+  </td>
+  <td>
+    <p>
+    <%= link_to "Destroy", @location, method: :delete, class: 'btn btn-secondary'%>
+    </p>
+  </td>
+</tr>
+</div>
