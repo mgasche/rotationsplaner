@@ -1,30 +1,24 @@
 <head>
   <title>Locations - Rotationsplaner</title>
 </head>
-<h1 class="locations-title">Locations</h1>
-<div class="locations-table">
+<h1 class="title">Locations</h1>
+<div class="container-lg">
 <table class="table table-striped">
   <thead class="table-dark">
       <tr>
         <th scope="col">Direktion</th>
-        <th scope="col">Strasse</th>
-        <th scope="col">Postleitzahl</th>
-        <th scope="col">Ort</th>
+        <th scope="col">Street</th>
+        <th scope="col">Zip code</th>
+        <th scope="col">Location</th>
         <th scope="col">View</th>
-        <th scope="col">Löschen</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
-<div id="locations">
   <% @locations.each do |location| %>
     <%= render location %>
-
   <% end %>
-</div>
-
 </table>
 </div>
-<div class="locations-new-button">
-  <div class="d-grid gap-2">
+  <div class="d-grid gap-2 col-6 mx-auto">
 <%= link_to "New location", new_location_path, class: 'btn btn-lg btn-danger'%>
 </div>
-  </div>

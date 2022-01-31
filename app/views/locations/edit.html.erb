@@ -1,10 +1,11 @@
-<h1>Editing location</h1>
-
+<h1 class="title">Editing Location</h1>
+<div class="locations-formular"
 <%= render "form", location: @location %>
-
-<br>
-
 <div>
-  <%= link_to "Show this location", @location %> |
-  <%= link_to "Back to locations", locations_path %>
+<br>
+<div class="locations-new-button">
+<div class="d-grid gap-2 col-6 mx-auto">
+
+  <%= link_to "Back to locations", locations_path, class: 'btn btn-secondary' %>
+</div>
 </div>

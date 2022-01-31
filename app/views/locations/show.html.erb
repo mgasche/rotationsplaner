@@ -1,9 +1,7 @@
-<p style="color: green"><%= notice %></p>
+<p<%= notice %></p>
 
 <%= render @location %>
-<button type="button" class="btn btn-primary btn-sm btn-dark"><%= link_to "Show this location", @location %></button>
 
-<button type="button" class="btn btn-primary btn-sm btn-dark"><%= link_to "Destroy this location", @location, method: :delete %></button>
 <div>
   <%= link_to "Edit this location", edit_location_path(@location) %> |
   <%= link_to "Back to locations", locations_path %>

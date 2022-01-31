@@ -1,9 +1,9 @@
 <head>
   <title>Users - Rotationsplaner</title>
 </head>
-<h1 class="locations-title">Users</h1>
+<h1 class="title">Users</h1>
 <p><%= notice %></p>
-<div class="users-table">
+<div class="container-lg">
   <table class="table table-striped">
     <thead class="table-dark">
         <tr>
@@ -13,6 +13,7 @@
           <th scope="col">Age</th>
           <th scope="col">About Me</th>
           <th scope="col">Show</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
   <% @users.each do |user| %>
@@ -20,10 +21,6 @@
   <% end %>
   </table>
 </div>
-
-
-<div class="users-new-button">
-  <div class="d-grid gap-2">
+  <div class="d-grid gap-2 col-6 mx-auto">
 <%= link_to "New user", new_user_path, class: 'btn btn-lg btn-danger' %>
-</div>
 </div>

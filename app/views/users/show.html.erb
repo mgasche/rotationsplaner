@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<head>
+  <title>Show User - Rotationsplaner</title>
+</head>
+<h1 class="title">Show User</h1>
+<p<%= notice %></p>
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+  <%= link_to "Edit this user", edit_user_path(@user) , class: 'btn btn-lg btn-danger'%>
+  <%= link_to "Back to users", users_path,  class: 'btn btn-lg btn-secondary' %>
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
-</div>
+  <%= button_to "Destroy this user", @user, method: :delete,class: 'btn btn-lg btn-danger' %>

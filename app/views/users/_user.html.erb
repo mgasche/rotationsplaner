@@ -31,6 +31,14 @@
   <%= link_to "Show", user, class: 'btn btn-secondary' %>
   </p>
 </td>
+
+<td>
+  <div data-controller="confirm">
+    <% @users.each do |user| %>
+      <%= button_to "Delete", user, method: :delete, data: { action: "click->users#delete" } %>
+    <% end %>
+  </div>
+</td>
 <tr>
 </div>
 </div>

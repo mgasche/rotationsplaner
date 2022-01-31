@@ -1,6 +1,8 @@
+<head>
+  <title>New Location - Rotationsplaner</title>
+</head>
+
 <%= form_with(model: location) do |form| %>
-<p>
-  </p>
 
   <% if location.errors.any? %>
     <div style="color: red">
@@ -35,20 +37,17 @@
     <%= form.label :location, style: "display: block" %>
     <%= form.text_field :location, class: "form-control"%>
   </div>
+  <p>
+    </p>
   <div>
     <%= form.label :user_id, style: "display: block" %>
     <%= form.number_field :user_id, class: "form-control"%>
   </div>
-
-
-
+  <p>
+    </p>
 </div>
-<p>
-  </p>
-  <div class="locations-new-button">
   <div class="d-grid gap-2 col-6 mx-auto">
     <%= form.submit class: 'btn btn-danger' %>
-  </div>
   </div>
 
 <% end %>
