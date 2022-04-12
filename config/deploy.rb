@@ -2,7 +2,7 @@
 lock "~> 3.17.0"
 
 set :application, "rotationsplaner"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:mgasche/rotationsplaner.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
