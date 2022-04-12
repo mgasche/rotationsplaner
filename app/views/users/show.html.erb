@@ -3,10 +3,23 @@
 </head>
 <h1 class="title">Show User</h1>
 <p<%= notice %></p>
-
+<div class="container-lg">
+  <table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+          <th scope="col">Firstname</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Age</th>
+          <th scope="col">About Me</th>
+          <th scope="col">Show</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
 <%= render @user %>
-
+</table>
+</div>
+<div class="d-grid gap-2 col-6 mx-auto">
   <%= link_to "Edit this user", edit_user_path(@user) , class: 'btn btn-lg btn-danger'%>
   <%= link_to "Back to users", users_path,  class: 'btn btn-lg btn-secondary' %>
-
-  <%= button_to "Destroy this user", @user, method: :delete,class: 'btn btn-lg btn-danger' %>
+</div>
